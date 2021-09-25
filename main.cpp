@@ -8,5 +8,7 @@ int main()
     string mes;
     getline(cin, mes);
     work(mes.c_str());
+    cout << endl;
+    system("pause");
     return 0;
 }

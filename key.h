@@ -89,8 +89,12 @@ void work(const char *mes)
 
 int getnum(char a)
 {
-	if(a>='0'&&a<='9')return a-48;
-	else if(a>='a'&&a<='f') return a-'a'+10;
+	if(a>='0'&&a<='9')
+        return a - 48;
+    else if(a>='a'&&a<='f')
+        return a - 'a' + 10;
+    else
+        return 0;
 }
 //get key from the message
 
@@ -101,7 +105,7 @@ void solve(const char *a)
 	int key = 0;
 	key = getnum(a[20]) * 10 + getnum(a[21]);
 //	cout << key << endl;
-	for (arr = 22; arr < strlen(a); arr += 4)
+	for (arr = 22; arr < (int)strlen(a); arr += 4)
 	{
 		int x = getnum(a[arr]) * 16 + getnum(a[arr+1]);
 		int y = getnum(a[arr+2]) * 16 + getnum(a[arr+3]);
