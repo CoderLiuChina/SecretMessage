@@ -16,9 +16,13 @@ namespace command
 	{
 		int len=strlen(com);
 		if(com[0]='h')
+		{
+			//type - help
+			if(len<5)
+			{
+				cout << "Type: help[command]" << endl;
+			}
 int main()
 {
 	str
 }
-
-//Not the end
