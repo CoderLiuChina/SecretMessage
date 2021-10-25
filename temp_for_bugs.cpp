@@ -6,22 +6,28 @@ using namespace std;
 
 namespace command
 {
-	char * comin()
+	string comin()
 	{
 		string com;
 		std::getline(cin,com);
-		return com.c_str();
+		return com;
 	}
-	char* comcheck(const char* com)
+	string comcheck(string com)
 	{
-		int len=strlen(com);
-		if(com[0]='h')
+		int len=com.size();
+		int arr_final=0,arr_begin=0;
+		for(arr_final=0;arr_final<len;arr_final++)
 		{
-			//type - help
-			if(len<5)
-			{
-				cout << "Type: help[command]" << endl;
-			}
+			if(com[arr_final]=" ")
+				break;
+			else continue;
+		}
+		string com_head = com.substr(arr_begin,arr_final);
+		arr_begin=arr_final;
+		//check 'help'
+		if(com_head == "help")
+		{
+			
 int main()
 {
 	str
